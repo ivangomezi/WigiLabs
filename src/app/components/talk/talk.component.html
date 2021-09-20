@@ -1,0 +1,43 @@
+<section class="wrapper page">
+    <div class="container-wrapper">
+        <div class="brand-center">
+            <h1>Agenda</h1>
+        </div>
+    </div>
+</section>
+
+<section class="container-talk">
+    <form (ngSubmit)="showAdd()" [formGroup]="addTalks">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">🔖 Título</span>
+            <input type="text" class="form-control" placeholder="Título de la talk" formControlName="title">
+        </div>
+        <div class="input-group mb-3">
+            <textarea class="form-control" placeholder="Descripción de la talk" formControlName="descript"></textarea> 
+        </div>
+        <button type="submit" class="btn btn-success w-100">Crear</button>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="talk-list">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of items">
+                <div class="header-item-list">
+                    <label>{{item.title}}</label>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary" (click)="Update(item.id)">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary" (click)="Delete(item.id)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <p id="_descrip">{{item.descript}}</p> 
+            </li>
+        </ul>
+    </div>
+</section>

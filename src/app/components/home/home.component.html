@@ -1,0 +1,51 @@
+<section class="wrapper">
+    <div class="container-wrapper">
+        <div class="brand-center">
+            <div class="row">
+                <div class="col" style="padding-top: 2rem;">
+                    <h1 style="color: rgba(183,232,18,1);">Bienvenido ¿quieres hablar?</h1>
+                    <div class="card p-5">
+                        <h4 style="color: rgb(23,25,65);">Ingresa tu nombre y unete al chat.</h4>
+                        <input type="text" class="form-control" [(ngModel)]='user.name' placeholder="Escribe tu nombre">
+                        <a class="btn btn-primary btn-block mt-3" (click)="chat()">Unirte al chat</a>
+                    </div>
+                </div>
+                <div class="col" style="text-align: center;">
+                    <img class="img" src="/assets/img/chat.png" alt="Imagen" style="width: 80%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-client">
+    <div class="skewed"></div>
+
+    <div class="container-what">
+        <div class="title-what">
+            <h1>¡No lo dudes más, escribenos 👍!</h1>
+        </div>
+        <div class="content-what">
+            <h5>
+                No dudes en contactarnos, para nosotros es un placer hablar contigo
+                y poder siempre solucionar todas tus dudas.
+            </h5>
+        </div>
+
+        <form class="mt-5" style="width: 30rem; margin: auto;" (ngSubmit)="showAdd()" [formGroup]="addMail">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control mb-3" placeholder="Nombres" formControlName="names">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control mb-3" placeholder="Apellidos" formControlName="last">
+                </div>
+            </div>
+            <input type="text" class="form-control mb-3" placeholder="Número de contacto" formControlName="number">
+            <input type="text" class="form-control mb-3" placeholder="Correo de contacto" formControlName="mail">
+            <textarea class="form-control mb-3" placeholder="Escribe tu mensaje" formControlName="descript"></textarea>
+            <button type="submit" class="btn btn-success w-100">Enviar</button>
+        </form>
+    </div>
+
+</section>

@@ -1,0 +1,27 @@
+<section class="wrapper page">
+    <div class="container-wrapper">
+        <div class="brand-center">
+            <h1>Editando tarea</h1>
+        </div>
+    </div>
+</section>
+
+<section class="card text-center">
+    <form (ngSubmit)="save()" [formGroup]="addTalks">
+        <div class="card-header">
+            ¡Verifica siempre los cambios que hagas!
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Título" formControlName="title">
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" id="descrip" rows="3" formControlName="descript"></textarea>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/talk']">Cancelar</button>
+        </div>
+    </form>
+</section>

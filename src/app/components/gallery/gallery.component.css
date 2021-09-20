@@ -1,0 +1,25 @@
+
+.container-gll {
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+/*gallery*/
+.parent {
+    display: grid;
+}
+.parent div {
+    margin: 5px;
+    width: -moz-fit-content;
+}
+.parent div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+    
+.div1 { grid-area: 1 / 1 / 3 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 2 / 2 / 3 / 4; }

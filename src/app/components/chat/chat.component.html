@@ -1,0 +1,51 @@
+<section class="wrapper page">
+    <div class="container-wrapper">
+        <div class="brand-center">
+            <h1>Chat 24/7</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-client">
+
+    <div class="container-what">
+        <div class="title-what">
+            <h1>Hola <span style="font-weight: bold;">{{userChat.user}}</span></h1>
+        </div>
+        <div class="content-what" style="width: 70%; margin: auto;">
+            <h5>
+                Hablemos de una mejor manera, escríbenos de inmediato y déjanos ayudarte 😃:
+            </h5>
+            <br>
+            <div class="box-send-chat" #box_send_chat>
+                <div class="box-txt-chat">
+                    <div class="box-txt-container animate__animated animate__bounce" *ngFor="let item of myMessages; let i = index">
+                        <div class="box-txt-title">
+                            {{item.user}} • {{item.hours}}
+                        </div>
+                        <div class="box-txt-content">
+                            {{item.text}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">💬</span>
+                </div>
+                <textarea 
+                    row="4" 
+                    class="form-control input-send" 
+                    placeholder="Escribe aquí tu idea" 
+                    [(ngModel)]="userChat.text"></textarea>
+                <div class="input-group-prepend">
+                    <button class="btn btn-success" type="button" (click)="myMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

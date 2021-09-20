@@ -1,0 +1,109 @@
+.container-wrapper .brand-center h1 {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: rgba(3, 203, 179, 1);
+}
+.container-wrapper .brand-center h5 {
+    font-weight: 300;
+}
+.container-wrapper .row .col {
+    padding-right: 0;
+    padding-left: 0;
+}
+.container-wrapper .row, .container-wrapper .row .col:first-child {
+    padding-top: 5rem;
+}
+.container-wrapper .img {
+    width: 100%;
+    opacity: .9;
+    margin-left: 10px;
+}
+
+.container-wrapper .btn-box-more {
+    padding-top: 5rem;
+}
+.container-wrapper .btn-box-more button {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 50px;
+    background: rgba(3, 203, 179, .7);
+    border: 1px solid rgba(3, 203, 179, 1);
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    transition: all 0.5s;
+}
+.container-wrapper .btn-box-more button:hover {
+    font-size: 20px;
+    background: rgba(3, 203, 179, 1);
+}
+
+
+/*container-client curva*/
+.container-client .skewed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    z-index: 2;
+    transform: skewY(-3deg);
+    transform-origin: top left;
+}
+
+/*container-client*/
+.container-client {
+    width: auto;
+    margin: auto;
+    color: #fff;
+    background: #fff;
+    padding: 5rem 15% 5rem 15%;
+    position: relative;
+}
+
+.container-client .container-what { /*what*/
+    color: rgb(23,25,65);
+    z-index: 2;
+    position: relative;
+}
+.container-client .container-what .title-what {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-what .title-what h1 {
+    flex-grow: 1;
+    order: 2;
+    text-align: center;
+    max-width: max-content;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}
+.title-what::before, .title-what::after {
+    background-color: rgba(3, 203, 179, 1);
+    content: "";
+    height: 1px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.container-what .title-what::before {
+    flex-grow: 1;
+    order: 1;
+}
+.container-what .title-what::after {
+    flex-grow: 1;
+    order: 3;
+}
+
+.container-what .content-what {
+    padding: 0px;
+}
+.container-what .content-what h5 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: capitalize;
+}

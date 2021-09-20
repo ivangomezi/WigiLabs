@@ -1,0 +1,93 @@
+.container-client {
+    width: auto;
+    margin: auto;
+    color: #fff;
+    background: #fff;
+    padding: 5rem 15% 5rem 15%;
+    position: relative;
+}
+
+.container-client .container-what { /*what*/
+    color: rgb(23,25,65);
+    z-index: 2;
+    position: relative;
+}
+.container-client .container-what .title-what {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-what .title-what h1 {
+    flex-grow: 1;
+    order: 2;
+    text-align: center;
+    max-width: max-content;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}
+.title-what::before, .title-what::after {
+    background-color: rgba(3, 203, 179, 1);
+    content: "";
+    height: 1px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.container-what .title-what::before {
+    flex-grow: 1;
+    order: 1;
+}
+.container-what .title-what::after {
+    flex-grow: 1;
+    order: 3;
+}
+
+
+.box-send-chat {
+    border: 1px solid #e1e1e1; 
+    border-radius: 5px; 
+    background: #f9f9f9;
+    max-height: 350px;
+    height: auto;
+    overflow-y: auto;
+}
+.box-send-chat .box-txt-chat {
+    padding: 20px 20px 20px 20px;
+}
+.box-send-chat .box-txt-container {
+    list-style: none;
+    margin: 5px;
+    width: 100%;
+    display: grid;
+}
+.box-send-chat .user {
+    justify-content: right;
+}
+.box-send-chat .box-txt-container .box-txt-title {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: max-content;
+    padding-bottom: 10px;
+}
+.box-send-chat .box-txt-container .box-txt-content {
+    background: rgba(82, 213, 137, .7);
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 5px;
+    max-width: 50%;
+    white-space: pre-wrap;
+}
+
+.content-what .input-group textarea {
+    border: 1px solid #e1e1e1 !important;
+}
+.content-what .input-group .input-send {
+    background: #f9f9f9;
+    height: 38px;
+    min-height: 38px;
+    max-height: max-content;
+    border: none;
+    resize: none;
+}

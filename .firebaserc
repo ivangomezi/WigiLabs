@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "database-e3f22": {
+      "hosting": {
+        "WigiLabs": [
+          "database-e3f22"
+        ]
+      }
+    }
+  }
+}
