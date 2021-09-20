@@ -61,3 +61,100 @@ body {
 .brand-center .card .card-body {
     padding: 30px !important;
 }
+
+
+
+
+
+/*/////Mobile////////*/
+/*header*/
+.m-nav{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    header {
+        position: fixed !important;
+    }
+    .m-nav{
+        display: unset;
+    }
+    .m-g{
+        display: none;
+    }
+}
+.btn-menu{cursor: pointer;}
+.float-menu{
+    display: none;
+    text-align: center !important;
+    position: fixed !important;
+    left: 10%;
+    right: 10%;
+    margin-top: 4rem !important;
+    background: rgb(247,247,247);
+    background: linear-gradient(270deg, rgba(247,247,247,1) 0%, rgba(255,255,255,1) 100%); 
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
+    border: 1px solid #e1e1e1;
+    border-radius: 50px 50px 50px 50px;
+}
+.float-menu::after{
+    content: ".";
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    margin-top: -2rem;
+    height: 50px;
+}
+.float-menu:before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(247,247,247,1);
+}
+.btn-menu:hover > .float-menu{
+    display: unset !important;
+}
+
+
+/*home*/
+@media screen and (max-width: 600px) {
+    .brand-center{
+        top: 40% !important;
+    }
+    .brand-center h1{
+        width: 100% !important;
+        margin: 0 0 10px 0 !important;
+    }
+    .container-what form{
+        width: 100% !important;
+    }
+}
+
+/*talk*/
+@media screen and (max-width: 600px) {
+    .container-talk{
+        width: 80% !important;
+        margin-top: 3rem !important;
+    }
+}
+
+/*chat*/
+@media screen and (max-width: 600px) {
+    .container-client{
+        padding: 10% !important;
+    }
+    .content-what {
+        width: 100% !important;
+    }
+}
+
+/*Update*/
+@media screen and (max-width: 600px) {
+    .w-g-c {
+        width: 90% !important;
+    }
+}
